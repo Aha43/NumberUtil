@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace NumberUtil.Test.PrimeNumbers
+namespace NumberUtil.Test.TestData
 {
     public class PrimeNumbersTestData : IEnumerable<object[]>
     {

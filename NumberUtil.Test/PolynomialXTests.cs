@@ -1,5 +1,4 @@
 ﻿using Xunit;
-using NumberUtil.PrimeNumbers;
 
 namespace NumberUtil.Test
 {

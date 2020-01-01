@@ -3,7 +3,7 @@
 namespace NumberUtil
 {
     /// <summary>
-    /// Extensions methods of use when working with polynomials.
+    /// Extension methods of use when working with polynomials.
     /// </summary>
     public static class PolynomialX
     {

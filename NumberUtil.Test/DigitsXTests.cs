@@ -1,8 +1,7 @@
-﻿using NumberUtil;
-using System.Numerics;
+﻿using System.Numerics;
 using Xunit;
 
-namespace NumberUtil.Test.NumberExtensions
+namespace NumberUtil.Test
 {
     public class DigitsXTests
     {

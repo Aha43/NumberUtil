@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace NumberUtil.PrimeNumbers
+namespace NumberUtil
 {
     /// <summary>
     /// Represents all the prime numbers up to and including N.

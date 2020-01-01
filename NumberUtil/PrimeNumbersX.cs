@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NumberUtil.PrimeNumbers
+namespace NumberUtil
 {
     public static class PrimeNumbersX
     {

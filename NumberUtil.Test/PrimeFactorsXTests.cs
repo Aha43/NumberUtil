@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Linq;
 using Xunit;
-using NumberUtil.PrimeNumbers;
-using System.Linq;
 
-namespace NumberUtil.Test.PrimeNumbers
+namespace NumberUtil.Test
 {
     public class PrimeFactorsXTests
     {
