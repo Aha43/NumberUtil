@@ -1,2 +1,2 @@
 # NumberUtil
-C# utilities og use when coding with numbers in a readable way
+Utilities of use when coding with numbers in C# in a readable way
