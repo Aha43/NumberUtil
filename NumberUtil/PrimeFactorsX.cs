@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace NumberUtil
 {
+    /// <summary>
+    /// Extensions methods of use when finding prime factors of numbers.
+    /// </summary>
     public static class PrimeFactorsX
     {
         public static IEnumerable<int> PrimeFactors(this int n)

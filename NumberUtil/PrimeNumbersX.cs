@@ -2,6 +2,9 @@
 
 namespace NumberUtil
 {
+    /// <summary>
+    /// Extensions methods of use when working with prime numbers.
+    /// </summary>
     public static class PrimeNumbersX
     {
         public static PrimeNumbers PrimeNumbers(this long n) => new PrimeNumbers(n);

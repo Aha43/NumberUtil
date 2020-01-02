@@ -2,6 +2,9 @@
 
 namespace NumberUtil
 {
+    /// <summary>
+    /// Extensions methods of use when working with IEnumerable of numbers.
+    /// </summary>
     public static class IEnumerableX
     {
         public static int Product(this IEnumerable<int> sequence)

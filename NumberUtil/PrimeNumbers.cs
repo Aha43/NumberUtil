@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace NumberUtil
 {
     /// <summary>
-    /// Represents all the prime numbers up to and including N.
+    /// Represents all the prime numbers up to and including N using a sieve of Eratosthenes.
     /// </summary>
     public class PrimeNumbers : IEnumerable<long>
     {
