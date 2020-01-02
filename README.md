@@ -1,3 +1,4 @@
+Work in progress
 # NumberUtil
 ### Utilities of use when coding with numbers in C# in a readable way
 #### Prime number examples
