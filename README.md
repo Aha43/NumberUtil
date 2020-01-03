@@ -12,7 +12,7 @@ Coding challenges (for example Euler project problems) in C# I started to re-use
 101.IsPrime(); // return true
 99.IsPrime(); // return false
 ```
-Making a (Eratosthenes) sieve with the prime up to and including N of 211 (211 happens to be a prime)
+##### Making a (Eratosthenes) sieve with the prime up to and including N of 211 (211 happens to be a prime)
 ```c#
 var N = 211;
 var primeNumbers = new PrimeNumbers(N); // the sieve
