@@ -18,4 +18,6 @@ var N = 211;
 var primeNumbers = new PrimeNumbers(N); // the sieve
 ````
 
+###### Using the sieve to get number of prime numbers in range [0...N]
+
 
