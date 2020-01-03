@@ -7,6 +7,7 @@ Coding challenges (for example Euler project problems) in C# I started to re-use
 #### Prime numbers
 ##### Test if number is prime number (int and long)
 
+<!-- T1 -->
 ```c#
 101.IsPrime(); // return true
 99.IsPrime(); // return false
