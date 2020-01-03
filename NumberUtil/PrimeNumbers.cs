@@ -98,42 +98,27 @@ namespace NumberUtil
         /// </summary>
         /// <param name="start">Number to start at, must not larger than N</param>
         /// <returns>Prime numbers</returns>
-        public IEnumerable<long> Primes(long start = 0) => Primes(start, N);
-
-        /// <summary>
-        /// Iterator that iterates over prime numbers this know.
-        /// </summary>
-        /// <param name="start">Number to start at, must not be larger than N</param>
-        /// <param name="end">Number to end at, must not be larger than N</param>
-        /// <returns>Prime numbers</returns>
-        public IEnumerable<long> Primes(long start, long end)
+        public IEnumerable<long> Primes()
         {
-            if (start < 0)
+            for (int i = 2; i <= N; i++)
             {
-                throw new ArgumentException(nameof(start) + " < 0 : " + start + " < 0");
+                if (_prime[i]) yield return i;
             }
-            if (start > N)
-            {
-                throw new ArgumentException(nameof(start) + " > " + nameof(N) + " : " + start + " > " + N);
-            }
-            if (end > N)
-            {
-                throw new ArgumentException(nameof(end) + " > " + nameof(N) + " : " + end + " > " + N);
-            }
-            if (end < start)
-            {
-                throw new ArgumentException(nameof(end) + " < " + nameof(start) + " : " + end + " < " + start);
-            }
-
-            end++;
-            for (var i = start; i < end; i++) if (_prime[i]) yield return i;    
         }
 
+        /// <summary>
+        /// Gets IEnumerator over all prime numbers this know.
+        /// </summary>
+        /// <returns>IEnumerator</returns>
         public IEnumerator<long> GetEnumerator()
         {
             for (var i = 0; i < N + 1; i++) if (_prime[i]) yield return i;
         }
 
+        /// <summary>
+        /// Gets IEnumerator over all prime numbers this know.
+        /// </summary>
+        /// <returns>IEnumerator</returns>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
