@@ -100,10 +100,7 @@ namespace NumberUtil
         /// <returns>Prime numbers</returns>
         public IEnumerable<long> Primes()
         {
-            for (int i = 2; i <= N; i++)
-            {
-                if (_prime[i]) yield return i;
-            }
+            for (int i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
         }
 
         /// <summary>
@@ -112,17 +109,14 @@ namespace NumberUtil
         /// <returns>IEnumerator</returns>
         public IEnumerator<long> GetEnumerator()
         {
-            for (var i = 0; i < N + 1; i++) if (_prime[i]) yield return i;
+            for (var i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
         }
 
         /// <summary>
         /// Gets IEnumerator over all prime numbers this know.
         /// </summary>
         /// <returns>IEnumerator</returns>
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
     }
 

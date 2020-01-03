@@ -1,4 +1,5 @@
 using NumberUtil.Test.TestData;
+using System;
 using System.Linq;
 using Xunit;
 
@@ -214,6 +215,27 @@ namespace NumberUtil.Test
             var primes = N.PrimeNumbers();
 
             Assert.Equal(expected, primes.IsPrime(n));
+        }
+
+        [Fact]
+        public void EnumerateOverFirstUnder20()
+        {
+            var i = 1;
+            foreach (var p in new PrimeNumbers(20))
+            {
+                switch (i++)
+                {
+                    case 1: Assert.Equal(2, p); break;
+                    case 2: Assert.Equal(3, p); break;
+                    case 3: Assert.Equal(5, p); break;
+                    case 4: Assert.Equal(7, p); break;
+                    case 5: Assert.Equal(11, p); break;
+                    case 6: Assert.Equal(13, p); break;
+                    case 7: Assert.Equal(17, p); break;
+                    case 8: Assert.Equal(19, p); break;
+                    default: throw new Exception();
+                }
+            }
         }
 
     }
