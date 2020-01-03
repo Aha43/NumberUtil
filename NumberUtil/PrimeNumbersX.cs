@@ -10,6 +10,11 @@ namespace NumberUtil
         public static PrimeNumbers PrimeNumbers(this long n) => new PrimeNumbers(n);
         public static PrimeNumbers PrimeNumbers(this int n) => new PrimeNumbers(n);
 
+        /// <summary>
+        /// Tells if number is prime number or not.
+        /// </summary>
+        /// <param name="n"></param> Number to test.
+        /// <returns>True if is else false</returns>
         public static bool IsPrime(this long n)
         {
             if (n < 2) return false;
@@ -33,6 +38,11 @@ namespace NumberUtil
             return true;
         }
 
+        /// <summary>
+        /// Tells if number is prime number or not.
+        /// </summary>
+        /// <param name="n"></param> Number to test.
+        /// <returns>True if is else false</returns>
         public static bool IsPrime(this int n) { return ((long)n).IsPrime(); }
 
     }
