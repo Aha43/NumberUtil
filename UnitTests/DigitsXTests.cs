@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using Xunit;
 
-namespace NumberUtil.Test
+namespace NumberUtil
 {
     public class DigitsXTests
     {

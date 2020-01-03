@@ -1,13 +1,9 @@
-using NumberUtil.Test.TestData;
+using NumberUtil.TestData;
 using System;
 using System.Linq;
 using Xunit;
 
-//
-// TODO: More range tests.
-//
-
-namespace NumberUtil.Test
+namespace NumberUtil
 {
     public class PrimeNumbersTests
     {

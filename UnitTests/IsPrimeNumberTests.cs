@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace NumberUtil.Test
+namespace NumberUtil
 {
     public class IsPrimeNumberTests
     {

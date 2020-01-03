@@ -1,11 +1,10 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace NumberUtil.Test
+namespace NumberUtil
 {
     public class PrimeFactorsXTests
     {
-        
         [Fact]
         public void PrimeFactorsX_int_PrimeFactors()
         {
