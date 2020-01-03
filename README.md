@@ -2,7 +2,7 @@ Work in progress
 # NumberUtil
 ### Utilities of use when coding with numbers in C# in a readable way
 #### Background ####
-Coding challenges (for example Euler project problems) in C# I started to re-use code over problems and decided to put that stuff in this library.
+Coding challenges (for example the [Euler project](https://projecteuler.net/) problems) in C# I started to re-use code over problems and decided to put that stuff in this library.
 
 #### Prime numbers
 ##### Test if number is prime number (int and long)
