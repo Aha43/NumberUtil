@@ -7,9 +7,6 @@ namespace NumberUtil
     /// </summary>
     public static class PrimeNumbersX
     {
-        public static PrimeNumbers PrimeNumbers(this long n) => new PrimeNumbers(n);
-        public static PrimeNumbers PrimeNumbers(this int n) => new PrimeNumbers(n);
-
         /// <summary>
         /// Tells if number is prime number or not.
         /// </summary>

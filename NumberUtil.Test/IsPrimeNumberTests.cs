@@ -7,9 +7,8 @@ namespace NumberUtil.Test
         [Fact]
         public void IsPrimeTest()
         {
-            var N = 10000L;
-            var primes = N.PrimeNumbers();
-            for (long i = 0; i <= N; i++)
+            var primes = new PrimeNumbers(10000);
+            for (long i = 0; i <= primes.N; i++)
             {
                 var expected = primes.IsPrime(i);
                 Assert.Equal(expected, i.IsPrime());

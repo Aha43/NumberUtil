@@ -14,8 +14,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N0_GetAll()
         {
-            long N = 0;
-            var primes = N.PrimeNumbers().Primes();
+            var primes = new PrimeNumbers(0).Primes();
 
             Assert.Empty(primes);
         }
@@ -23,7 +22,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N1_GetAll()
         {
-            var primes = 1L.PrimeNumbers().Primes();
+            var primes = new PrimeNumbers(1).Primes();
 
             Assert.Empty(primes);
         }
@@ -31,7 +30,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N2_GetAll()
         {
-            var primes = 2L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(2).Primes().ToArray();
 
             Assert.Single(primes);
             Assert.Equal(2, primes[0]);
@@ -40,7 +39,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N3_GetAll()
         {
-            var primes = 3L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(3).Primes().ToArray();
 
             Assert.Equal(2, primes.Length);
 
@@ -51,7 +50,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N4_GetAll()
         {
-            var primes = 4L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(4).Primes().ToArray();
 
             Assert.Equal(2, primes.Length);
             Assert.Equal(2, primes[0]);
@@ -61,7 +60,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N5_GetAll()
         {
-            var primes = 5L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(5).Primes().ToArray();
 
             Assert.Equal(3, primes.Length);
 
@@ -73,7 +72,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N6_GetAll()
         {
-            var primes = 6L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(6).Primes().ToArray();
 
             Assert.Equal(3, primes.Length);
 
@@ -85,7 +84,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N7_GetAll()
         {
-            var primes = 7L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(7).Primes().ToArray();
 
             Assert.Equal(4, primes.Length);
 
@@ -98,7 +97,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N8_GetAll()
         {
-            var primes = 8L.PrimeNumbers().Primes().ToArray();
+            var primes = new PrimeNumbers(7).Primes().ToArray();
 
             Assert.Equal(4, primes.Length);
 
@@ -111,7 +110,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N0_TestIfPrime()
         {
-            var primes = 0L.PrimeNumbers();
+            var primes = new PrimeNumbers(0);
 
             Assert.Equal(0, primes.N);
             Assert.Equal(0, primes.Count);
@@ -121,7 +120,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N1_TestIfPrime()
         {
-            var primes = 1L.PrimeNumbers();
+            var primes = new PrimeNumbers(1);
 
             Assert.Equal(1, primes.N);
             Assert.Equal(0, primes.Count);
@@ -132,7 +131,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N2_TestIfPrime()
         {
-            var primes = 2L.PrimeNumbers();
+            var primes = new PrimeNumbers(2);
 
             Assert.Equal(2, primes.N);
             Assert.Equal(1, primes.Count);
@@ -144,7 +143,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N3_TestIfPrime()
         {
-            var primes = 3L.PrimeNumbers();
+            var primes = new PrimeNumbers(3);
 
             Assert.Equal(3, primes.N);
             Assert.Equal(2, primes.Count);
@@ -157,7 +156,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N4_TestIfPrime()
         {
-            var primes = 4L.PrimeNumbers();
+            var primes = new PrimeNumbers(4);
 
             Assert.Equal(4, primes.N);
             Assert.Equal(2, primes.Count);
@@ -171,7 +170,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N5_TestIfPrime()
         {
-            var primes = 5L.PrimeNumbers();
+            var primes = new PrimeNumbers(5);
 
             Assert.Equal(5, primes.N);
             Assert.Equal(3, primes.Count);
@@ -186,7 +185,7 @@ namespace NumberUtil.Test
         [Fact]
         public void N6_TestIfPrime()
         {
-            var primes = 6L.PrimeNumbers();
+            var primes = new PrimeNumbers(6);
 
             Assert.Equal(6, primes.N);
             Assert.Equal(3, primes.Count);
@@ -202,7 +201,7 @@ namespace NumberUtil.Test
         [Fact]
         public void CountPrimesUpTo10K()
         {
-            var primes = 10000L.PrimeNumbers();
+            var primes = new PrimeNumbers(10000);
 
             Assert.Equal(10000, primes.N);
             Assert.Equal(1229, primes.Count);
@@ -212,7 +211,7 @@ namespace NumberUtil.Test
         [ClassData(typeof(PrimeNumbersTestData))]
         public void N103_TestIfPrime(long N, long n, bool expected)
         {
-            var primes = N.PrimeNumbers();
+            var primes = new PrimeNumbers(N);
 
             Assert.Equal(expected, primes.IsPrime(n));
         }
