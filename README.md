@@ -19,8 +19,8 @@ The parentheses are needed for the negative number or it would mean applying the
 ##### Getting digits of numbers (int, long and BigInteger)
 <!-- T7 -->
 ```c#
-var digits1 = 12345.Digits(); // Gets array with digits of 1, 2, 3, 4, 5 (digits[0] = 1 and digits[4] = 5)
-var digits2 = (-12345).Digits(); // Gets array with digits of -1, -2, -3, -4, -5 (digits[0] = -1 and digits[4] = -5)
+var dig1 = 12345.Digits(); // Gets array with digits of 1, 2, 3, 4, 5 (dig1[0] = 1 and dig1[4] = 5)
+var dig2 = (-12345).Digits(); // Gets array with digits of -1, -2, -3, -4, -5 (dig2[0] = -1 and dig2[4] = -5)
 ```
 
 #### Prime numbers
