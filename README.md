@@ -14,7 +14,15 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 BigInteger.Multiply(long.MaxValue, 1000).NumberOfDigits(); // Returns 22
 BigInteger.Multiply(long.MaxValue, -1000).NumberOfDigits(); // Also returns 22
 ```
+
 The parentheses are needed for the negative number or it would mean applying the unary operator `-` on the result of `12345.NumberOfDigits()`.
+
+##### Getting digits of numbers
+
+```c#
+var digits = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 and digits[4] = 5
+```
+
 #### Prime numbers
 ##### Test if number is prime number (int and long)
 
