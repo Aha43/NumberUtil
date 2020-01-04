@@ -98,9 +98,12 @@ namespace NumberUtil
         /// </summary>
         /// <param name="start">Number to start at, must not larger than N</param>
         /// <returns>Prime numbers</returns>
-        public IEnumerable<long> Primes()
+        public IEnumerable<long> Primes
         {
-            for (int i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
+            get
+            {
+                for (int i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
+            }
         }
 
         /// <summary>
