@@ -10,7 +10,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 <!-- T5 -->
 ```c#
 12345.NumberOfDigits(); // Returns 5
--12345.NumberOfDigits(); // Also returns 5: sign not counted
+(-12345).NumberOfDigits(); // Also returns 5: sign not counted
 BigInteger.Multiply(long.MaxValue, 10).NumberOfDigits(); // Returns 21
 ```
 #### Prime numbers
