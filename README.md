@@ -24,3 +24,5 @@ var primeNumbers = new PrimeNumbers(N); // the sieve
 var numberOfPrimes = primeNumbers.Count; // will be 47 if N = 211
 ```
 
+###### Using the sieve to test if numbers in the range [0...N] is prime number or not (assumes N = 211)
+
