@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using Xunit;
 
@@ -41,6 +42,15 @@ namespace NumberUtil
             var primeNumbers = new PrimeNumbers(N); // the sieve
             var largest = primeNumbers.Last(); // using LINQ to get the largest prime less or equal to N.
             Assert.Equal(211, largest);
+        }
+
+        [Fact]
+        public void T5()
+        {
+            Assert.Equal(5, 12345.NumberOfDigits()); // Returns 5
+            Assert.Equal(5, (-12345).NumberOfDigits()); // Also returns 5: sign not counted
+            Assert.Equal(22, BigInteger.Multiply(long.MaxValue, 1000).NumberOfDigits()); // Returns 22
+            Assert.Equal(22, BigInteger.Multiply(long.MaxValue, -1000).NumberOfDigits());
         }
 
     }
