@@ -13,7 +13,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 (-12345).NumberOfDigits(); // Also returns 5: sign not counted
 BigInteger.Multiply(long.MaxValue, 10).NumberOfDigits(); // Returns 20
 ```
-The paranthesises are needed for the negative number or it would mean applying the unary operator `-` on the result of `12345.NumberOfDigits()`.
+The parentheses are needed for the negative number or it would mean applying the unary operator `-` on the result of `12345.NumberOfDigits()`.
 #### Prime numbers
 ##### Test if number is prime number (int and long)
 
