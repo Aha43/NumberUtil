@@ -6,7 +6,6 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 
 #### Working with the digits of numbers
 ##### Number of digits a number have (int, long and BigInteger)
-
 <!-- T5 -->
 ```c#
 12345.NumberOfDigits(); // Returns 5
@@ -18,14 +17,14 @@ BigInteger.Multiply(long.MaxValue, -1000).NumberOfDigits(); // Also returns 22
 The parentheses are needed for the negative number or it would mean applying the unary operator `-` on the result of `12345.NumberOfDigits()`.
 
 ##### Getting digits of numbers (int, long and BigInteger)
-
+<!-- T7 -->
 ```c#
-var digits = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 and digits[4] = 5)
+var digits1 = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 and digits[4] = 5)
+var digits2 = -12345.Digits(); // Same result as above: sign is ignored.
 ```
 
 #### Prime numbers
 ##### Test if number is prime number (int and long)
-
 <!-- T1 -->
 ```c#
 101.IsPrime(); // return true
@@ -33,7 +32,6 @@ var digits = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 a
 ```
 
 ##### Get prime factors of a number (int and long)
-
 <!-- T6 -->
 ```c#
 var factors = 30.PrimeFactors().ToArray(); // Array will contain 2, 3 and 5. 
@@ -65,4 +63,3 @@ primeNumbers.IsPrime(211); // true
 ```c#
 var largest = primeNumbers.Last(); // using LINQ to get the largest prime less or equal to N.
 ```
-
