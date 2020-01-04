@@ -2,8 +2,16 @@ Work in progress
 # NumberUtil
 ### Utilities of use when coding with numbers in a readable way using C#
 #### Background ####
-Coding challenges (for example the [Euler project](https://projecteuler.net/) problems) in C# I started to re-use code over problems and decided to put that stuff in this library.
+Coding challenges (for example the [Euler project](https://projecteuler.net/)'s problems) in C# I started to re-use code over problems and decided to put that stuff in this library.
 
+#### Working with the digits of numbers
+##### Number of digits a number have
+
+<!-- T5 -->
+```#c
+12345.NumberOfDigits(); // Returns 5
+-12345.NumberOfDigits(); // Also returns 5: '-' not counted
+```
 #### Prime numbers
 ##### Test if number is prime number (int and long)
 
