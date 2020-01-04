@@ -4,14 +4,14 @@ using System.Numerics;
 namespace NumberUtil
 {
     /// <summary>
-    /// Extensions methods of use when working with long or int values' digits.
+    /// Extensions methods of use when working with digits of numbers.
     /// </summary>
     public static class DigitsX
     {
         /// <summary>
-        /// Gets number of digits of a given Int32 value. Note that '-' does not count as digit: 10.NumberOfDigits() == -10.NumberOfDigits().
+        /// Gets number of digits of a number. Note that '-' does not count as digit: 10.NumberOfDigits() == -10.NumberOfDigits().
         /// </summary>
-        /// <param name="n">Value</param>
+        /// <param name="n">Val</param>
         /// <returns>Number of digits</returns>
         public static int NumberOfDigits(this int n)
         {
@@ -44,7 +44,7 @@ namespace NumberUtil
         }
 
         /// <summary>
-        /// Gets number of digits of a given Int64 value. Note that '-' does not count as digit: 10.NumberOfDigits() == -10.NumberOfDigits().
+        /// Gets number of digits of a number. Note that '-' does not count as digit: 10.NumberOfDigits() == -10.NumberOfDigits().
         /// </summary>
         /// <param name="n">Value</param>
         /// <returns>Number of digits</returns>
@@ -96,6 +96,11 @@ namespace NumberUtil
             }
         }
 
+        /// <summary>
+        /// Gets number of digits of a number. Note that '-' does not count as digit: 10.NumberOfDigits() == -10.NumberOfDigits().
+        /// </summary>
+        /// <param name="n">Value</param>
+        /// <returns>Number of digits</returns>
         public static int NumberOfDigits(this BigInteger n)
         {
             return (int)Math.Floor(BigInteger.Log10(BigInteger.Abs(n)) + 1);

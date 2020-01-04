@@ -53,6 +53,16 @@ namespace NumberUtil
             Assert.Equal(22, BigInteger.Multiply(long.MaxValue, -1000).NumberOfDigits());
         }
 
+        [Fact]
+        public void T6()
+        {
+            var factors = 30.PrimeFactors().ToArray(); // Array will contain 2, 3 and 5.
+            Assert.Equal(3, factors.Length);
+            Assert.Contains(2, factors);
+            Assert.Contains(3, factors);
+            Assert.Contains(5, factors);
+        }
+
     }
 
 }

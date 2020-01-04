@@ -43,6 +43,11 @@ namespace NumberUtil
         /// <returns>True if is else false</returns>
         public static bool IsPrime(this int n) { return ((long)n).IsPrime(); }
 
+        /// <summary>
+        /// Iterator over a numbers prime factors.
+        /// </summary>
+        /// <param name="n">Number</param>
+        /// <returns>IEnumerable over prime factors</returns>
         public static IEnumerable<int> PrimeFactors(this int n)
         {
             if (n < 2) yield break;
@@ -72,6 +77,11 @@ namespace NumberUtil
             if (n > 2) yield return n;
         }
 
+        /// <summary>
+        /// Iterator over a numbers prime factors.
+        /// </summary>
+        /// <param name="n">Number</param>
+        /// <returns>IEnumerable over prime factors</returns>
         public static IEnumerable<long> PrimeFactors(this long n)
         {
             if (n < 2) yield break;
