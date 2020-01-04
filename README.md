@@ -8,7 +8,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 ##### Number of digits a number have (int, long and BigInteger)
 
 <!-- T5 -->
-```#c
+```c#
 12345.NumberOfDigits(); // Returns 5
 -12345.NumberOfDigits(); // Also returns 5: sign not counted
 BigInteger.Multiply(long.MaxValue, 10).NumberOfDigits(); // Returns 21
