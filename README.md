@@ -28,8 +28,9 @@ The parentheses are needed for the negative number or it would mean applying the
 
 <!-- T6 -->
 ```c#
-var factors = 30.PrimeFactors().ToArray(); // Array will contain 2, 3 and 5. Primes are not iterated over in a sorted order
+var factors = 30.PrimeFactors().ToArray(); // Array will contain 2, 3 and 5. 
 ```
+Primes are not iterated over in a sorted order.
 
 ##### Making a (Eratosthenes) sieve with the prime up to and including N of 211 (211 happens to be a prime)
 ```c#
