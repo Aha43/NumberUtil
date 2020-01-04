@@ -35,6 +35,6 @@ primeNumbers.IsPrime(211); // true
 ###### Working with IEnumerable of primes
 <!-- T4 -->
 ```c#
-primeNumbers.Primes.Last(); // using LINQ to get the largest prime less or equal to N.
+var largest = primeNumbers.Primes.Last(); // using LINQ to get the largest prime less or equal to N.
 ```
 
