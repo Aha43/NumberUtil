@@ -32,9 +32,9 @@ primeNumbers.IsPrime(210); // false
 primeNumbers.IsPrime(211); // true
 ```
 
-###### Working with IEnumerable of primes
+###### PrimeNumbers instance is an IEnumerable over primes up to N
 <!-- T4 -->
 ```c#
-var largest = primeNumbers.Primes.Last(); // using LINQ to get the largest prime less or equal to N.
+var largest = primeNumbers.Last(); // using LINQ to get the largest prime less or equal to N.
 ```
 
