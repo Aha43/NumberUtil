@@ -10,7 +10,7 @@ namespace NumberUtil
         [Fact]
         public void N0_GetAll()
         {
-            var primes = new PrimeNumbers(0).Primes;
+            var primes = new PrimeNumbers(0);
 
             Assert.Empty(primes);
         }
@@ -18,7 +18,7 @@ namespace NumberUtil
         [Fact]
         public void N1_GetAll()
         {
-            var primes = new PrimeNumbers(1).Primes;
+            var primes = new PrimeNumbers(1);
 
             Assert.Empty(primes);
         }
@@ -26,7 +26,7 @@ namespace NumberUtil
         [Fact]
         public void N2_GetAll()
         {
-            var primes = new PrimeNumbers(2).Primes.ToArray();
+            var primes = new PrimeNumbers(2).ToArray();
 
             Assert.Single(primes);
             Assert.Equal(2, primes[0]);
@@ -35,7 +35,7 @@ namespace NumberUtil
         [Fact]
         public void N3_GetAll()
         {
-            var primes = new PrimeNumbers(3).Primes.ToArray();
+            var primes = new PrimeNumbers(3).ToArray();
 
             Assert.Equal(2, primes.Length);
 
@@ -46,7 +46,7 @@ namespace NumberUtil
         [Fact]
         public void N4_GetAll()
         {
-            var primes = new PrimeNumbers(4).Primes.ToArray();
+            var primes = new PrimeNumbers(4).ToArray();
 
             Assert.Equal(2, primes.Length);
             Assert.Equal(2, primes[0]);
@@ -56,7 +56,7 @@ namespace NumberUtil
         [Fact]
         public void N5_GetAll()
         {
-            var primes = new PrimeNumbers(5).Primes.ToArray();
+            var primes = new PrimeNumbers(5).ToArray();
 
             Assert.Equal(3, primes.Length);
 
@@ -68,7 +68,7 @@ namespace NumberUtil
         [Fact]
         public void N6_GetAll()
         {
-            var primes = new PrimeNumbers(6).Primes.ToArray();
+            var primes = new PrimeNumbers(6).ToArray();
 
             Assert.Equal(3, primes.Length);
 
@@ -80,7 +80,7 @@ namespace NumberUtil
         [Fact]
         public void N7_GetAll()
         {
-            var primes = new PrimeNumbers(7).Primes.ToArray();
+            var primes = new PrimeNumbers(7).ToArray();
 
             Assert.Equal(4, primes.Length);
 
@@ -93,7 +93,7 @@ namespace NumberUtil
         [Fact]
         public void N8_GetAll()
         {
-            var primes = new PrimeNumbers(7).Primes.ToArray();
+            var primes = new PrimeNumbers(7).ToArray();
 
             Assert.Equal(4, primes.Length);
 

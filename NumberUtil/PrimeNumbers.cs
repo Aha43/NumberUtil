@@ -98,27 +98,21 @@ namespace NumberUtil
         /// </summary>
         /// <param name="start">Number to start at, must not larger than N</param>
         /// <returns>Prime numbers</returns>
-        public IEnumerable<long> Primes
-        {
-            get
-            {
-                for (int i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
-            }
-        }
+        //public IEnumerable<long> Primes
+        //{
+        //    get
+        //    {
+        //        for (int i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
+        //    }
+        //}
 
-        /// <summary>
-        /// Gets IEnumerator over all prime numbers this know.
-        /// </summary>
-        /// <returns>IEnumerator</returns>
+        // Implementing IEnumerable<long>
         public IEnumerator<long> GetEnumerator()
         {
             for (var i = 2; i < N + 1; i++) if (_prime[i]) yield return i;
         }
 
-        /// <summary>
-        /// Gets IEnumerator over all prime numbers this know.
-        /// </summary>
-        /// <returns>IEnumerator</returns>
+        // Implementing IEnumerable<long>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
     }

@@ -39,7 +39,7 @@ namespace NumberUtil
         {
             var N = 211;
             var primeNumbers = new PrimeNumbers(N); // the sieve
-            var largest = primeNumbers.Primes.Last(); // using LINQ to get the largest prime less or equal to N.
+            var largest = primeNumbers.Last(); // using LINQ to get the largest prime less or equal to N.
             Assert.Equal(211, largest);
         }
 
