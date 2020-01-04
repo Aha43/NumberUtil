@@ -20,7 +20,7 @@ The parentheses are needed for the negative number or it would mean applying the
 ##### Getting digits of numbers
 
 ```c#
-var digits = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 and digits[4] = 5
+var digits = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 and digits[4] = 5)
 ```
 
 #### Prime numbers
