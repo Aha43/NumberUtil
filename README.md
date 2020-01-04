@@ -5,12 +5,13 @@ Work in progress
 Coding challenges (for example the [Euler project](https://projecteuler.net/)'s problems) in C# I started to re-use code over problems and decided to put that stuff in this library.
 
 #### Working with the digits of numbers
-##### Number of digits a number have
+##### Number of digits a number have (int, long and BigInteger)
 
 <!-- T5 -->
 ```#c
 12345.NumberOfDigits(); // Returns 5
 -12345.NumberOfDigits(); // Also returns 5: sign not counted
+BigInteger.Multiply(long.MaxValue, 10).NumberOfDigits(); // Returns 21
 ```
 #### Prime numbers
 ##### Test if number is prime number (int and long)
