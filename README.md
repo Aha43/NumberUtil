@@ -17,7 +17,7 @@ BigInteger.Multiply(long.MaxValue, -1000).NumberOfDigits(); // Also returns 22
 
 The parentheses are needed for the negative number or it would mean applying the unary operator `-` on the result of `12345.NumberOfDigits()`.
 
-##### Getting digits of numbers
+##### Getting digits of numbers (int, long and BigInteger)
 
 ```c#
 var digits = 12345.Digits(); // Gets array with digits of 12345 (digits[0] = 1 and digits[4] = 5)
