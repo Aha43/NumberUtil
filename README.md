@@ -19,6 +19,7 @@ var primeNumbers = new PrimeNumbers(N); // the sieve
 ````
 
 ###### Using the sieve to get number of prime numbers in range [0...N]
+<!-- T2 -->
 ```c#
 var numberOfPrimes = primeNumbers.Count; // will be 47 if N = 211
 ```
