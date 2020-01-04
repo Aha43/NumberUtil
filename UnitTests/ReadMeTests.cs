@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -31,6 +32,15 @@ namespace NumberUtil
             Assert.True(primeNumbers.IsPrime(101)); // true
             Assert.False(primeNumbers.IsPrime(210)); // false
             Assert.True(primeNumbers.IsPrime(211)); // true
+        }
+
+        [Fact]
+        public void T4()
+        {
+            var N = 211;
+            var primeNumbers = new PrimeNumbers(N); // the sieve
+            var largest = primeNumbers.Primes.Last(); // using LINQ to get the largest prime less or equal to N.
+            Assert.Equal(211, largest);
         }
 
     }
