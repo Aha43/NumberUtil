@@ -22,6 +22,12 @@ The parentheses are needed for the negative number or it would mean applying the
 var dig = 12345.Digits(); // Gets array with digits 1, 2, 3, 4 and 5 (dig[0] = 1 and dig[4] = 5)
 ```
 
+##### Given digits in base 10 get the number (int, long)
+<!-- T8 -->
+```c#
+var digits = 54321.Digits();
+var value = digits.Number(); // value = 54321.
+
 #### Prime numbers
 ##### Test if number is prime number (int and long)
 <!-- T1 -->
