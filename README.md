@@ -19,7 +19,7 @@ The parentheses are needed for the negative number or it would mean applying the
 ##### Getting digits of numbers (int, long and BigInteger numbers >= 0)
 <!-- T7 -->
 ```c#
-var dig = 12345.Digits(); // Gets array with digits 1, 2, 3, 4 and 5 (dig1[0] = 1 and dig1[4] = 5)
+var dig = 12345.Digits(); // Gets array with digits 1, 2, 3, 4 and 5 (dig[0] = 1 and dig[4] = 5)
 ```
 
 #### Prime numbers
