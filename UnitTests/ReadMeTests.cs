@@ -76,6 +76,13 @@ namespace NumberUtil
             Assert.Equal(5, dig[4]);
         }
 
+        [Fact]
+        public void T8()
+        {
+            var digits = 54321.Digits();
+            Assert.Equal(54321, digits.Number()); // value = 54321.
+        }
+
     }
 
 }

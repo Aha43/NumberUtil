@@ -105,10 +105,48 @@ namespace NumberUtil
         [Theory]
         [InlineData(0, new int[] { 0 })]
         [InlineData(1, new int[] { 1 })]
+        [InlineData(2, new int[] { 2 })]
+        [InlineData(123, new int[] { 1, 2, 3})]
 
-        public void ToInt(int expected, int[] digits)
+        public void ToNumberInt(int expected, int[] digits)
         {
-            Assert.Equal(expected, digits.ToInt());
+            Assert.Equal(expected, digits.Number());
+        }
+
+        [Theory]
+        [InlineData(0L, new long[] { 0L })]
+        [InlineData(1L, new long[] { 1L })]
+        [InlineData(2L, new long[] { 2L })]
+        [InlineData(123L, new long[] { 1L, 2L, 3L })]
+
+        public void ToNumberLong(long expected, long[] digits)
+        {
+            Assert.Equal(expected, digits.Number());
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(123)]
+        [InlineData(int.MaxValue)]
+        public void TestingDigitsAndNumberInt(int number)
+        {
+            var digits = number.Digits();
+            Assert.Equal(number, digits.Number());
+        }
+
+        [Theory]
+        [InlineData(0L)]
+        [InlineData(1L)]
+        [InlineData(2L)]
+        [InlineData(123L)]
+        [InlineData(int.MaxValue)]
+        [InlineData(long.MaxValue)]
+        public void TestingDigitsAndNumberLong(long number)
+        {
+            var digits = number.Digits();
+            Assert.Equal(number, digits.Number());
         }
 
     }

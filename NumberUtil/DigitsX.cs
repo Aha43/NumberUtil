@@ -157,7 +157,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="n">Number</param>
         /// <returns>Digits</returns>
-        public static int[] Digits(this long n)
+        public static long[] Digits(this long n)
         {
             if (n < 0)
             {
@@ -165,7 +165,7 @@ namespace NumberUtil
             }
 
             var count = n.NumberOfDigits();
-            var retVal = new int[count];
+            var retVal = new long[count];
             for (var i = count - 1; i >= 0; i--)
             {
                 retVal[i] = (int)(n % 10);
@@ -175,33 +175,46 @@ namespace NumberUtil
             return retVal;
         }
 
-        public static long ToLong(this int[] digits)
+        /// <summary>
+        /// Convert the given digits to its base 10 number. Leftmost digit is digits[0].
+        /// </summary>
+        /// <param name="digits">Digits</param>
+        /// <returns>Base 10 representation</returns>
+        public static long Number(this long[] digits)
         {
             var retVal = 0L;
 
-            for (var i = 0; i < digits.Length; i++)
+            var n = digits.Length;
+
+            for (int i = 0, p = n - 1; i < n; i++, p--)
             {
-                switch (i)
+                var d = digits[i];
+                if (d < 0)
                 {
-                    case  0: retVal += digits[0]  * 1; break;
-                    case  1: retVal += digits[1]  * 10; break;
-                    case  2: retVal += digits[2]  * 100; break;
-                    case  3: retVal += digits[3]  * 1000; break;
-                    case  4: retVal += digits[4]  * 10000; break;
-                    case  5: retVal += digits[5]  * 100000; break;
-                    case  6: retVal += digits[6]  * 1000000; break;
-                    case  7: retVal += digits[7]  * 10000000; break;
-                    case  8: retVal += digits[8]  * 100000000; break;
-                    case  9: retVal += digits[9]  * 1000000000; break;
-                    case 10: retVal += digits[10] * 10000000000; break;
-                    case 11: retVal += digits[11] * 100000000000; break;
-                    case 12: retVal += digits[12] * 1000000000000; break;
-                    case 13: retVal += digits[13] * 10000000000000; break;
-                    case 14: retVal += digits[14] * 100000000000000; break;
-                    case 15: retVal += digits[15] * 1000000000000000; break;
-                    case 16: retVal += digits[16] * 10000000000000000; break;
-                    case 17: retVal += digits[17] * 100000000000000000; break;
-                    case 18: retVal += digits[18] * 1000000000000000000; break;
+                    throw new ArgumentException(nameof(digits) + "[" + i + "] < 0 : " + d + " < 0");
+                }
+
+                switch (p)
+                {
+                    case  0: retVal += d * 1; break;
+                    case  1: retVal += d * 10; break;
+                    case  2: retVal += d * 100; break;
+                    case  3: retVal += d * 1000; break;
+                    case  4: retVal += d * 10000; break;
+                    case  5: retVal += d * 100000; break;
+                    case  6: retVal += d * 1000000; break;
+                    case  7: retVal += d * 10000000; break;
+                    case  8: retVal += d * 100000000; break;
+                    case  9: retVal += d * 1000000000; break;
+                    case 10: retVal += d * 10000000000; break;
+                    case 11: retVal += d * 100000000000; break;
+                    case 12: retVal += d * 1000000000000; break;
+                    case 13: retVal += d * 10000000000000; break;
+                    case 14: retVal += d * 100000000000000; break;
+                    case 15: retVal += d * 1000000000000000; break;
+                    case 16: retVal += d * 10000000000000000; break;
+                    case 17: retVal += d * 100000000000000000; break;
+                    case 18: retVal += d * 1000000000000000000; break;
                     default: throw new OverflowException();
                 }
             }
@@ -209,24 +222,37 @@ namespace NumberUtil
             return retVal;
         }
 
-        public static int ToInt(this int[] digits)
+        /// <summary>
+        /// Convert the given digits to its base 10 number. Leftmost digit is digits[0].
+        /// </summary>
+        /// <param name="digits">Digits</param>
+        /// <returns>Base 10 representation</returns>
+        public static int Number(this int[] digits)
         {
             var retVal = 0;
 
-            for (var i = 0; i < digits.Length; i++)
+            var n = digits.Length;
+
+            for (int i = 0, p = n - 1; i < n; i++, p--)
             {
-                switch (i)
+                var d = digits[i];
+                if (d < 0)
                 {
-                    case 0: retVal += digits[0] * 1; break;
-                    case 1: retVal += digits[1] * 10; break;
-                    case 2: retVal += digits[2] * 100; break;
-                    case 3: retVal += digits[3] * 1000; break;
-                    case 4: retVal += digits[4] * 10000; break;
-                    case 5: retVal += digits[5] * 100000; break;
-                    case 6: retVal += digits[6] * 1000000; break;
-                    case 7: retVal += digits[7] * 10000000; break;
-                    case 8: retVal += digits[8] * 100000000; break;
-                    case 9: retVal += digits[9] * 1000000000; break;
+                    throw new ArgumentException(nameof(digits) + "[" + i + "] < 0 : " + d + " < 0");
+                }
+
+                switch (p)
+                {
+                    case 0: retVal += d * 1; break;
+                    case 1: retVal += d * 10; break;
+                    case 2: retVal += d * 100; break;
+                    case 3: retVal += d * 1000; break;
+                    case 4: retVal += d * 10000; break;
+                    case 5: retVal += d * 100000; break;
+                    case 6: retVal += d * 1000000; break;
+                    case 7: retVal += d * 10000000; break;
+                    case 8: retVal += d * 100000000; break;
+                    case 9: retVal += d * 1000000000; break;
                     default: throw new OverflowException();
                 }
             }
