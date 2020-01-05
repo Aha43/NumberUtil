@@ -27,6 +27,7 @@ var dig = 12345.Digits(); // Gets array with digits 1, 2, 3, 4 and 5 (dig[0] = 1
 ```c#
 var digits = 54321.Digits();
 var value = digits.Number(); // value = 54321.
+```
 
 #### Prime numbers
 ##### Test if number is prime number (int and long)
