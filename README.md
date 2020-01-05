@@ -12,6 +12,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 16.IsOdd(); // returns false
 17.IsEven(); // returns false
 -17.IsOdd(); // return true
+```
 
 #### Coding with the digits of numbers
 ##### Number of digits a number have (int, long and BigInteger)
