@@ -6,6 +6,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 
 #### Coding with numbers
 ##### Number even or odd?
+<!-- T9 -->
 ```c#
 16.IsEven(); // returns true
 16.IsOdd(); // returns false
