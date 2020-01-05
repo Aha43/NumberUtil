@@ -83,6 +83,16 @@ namespace NumberUtil
             Assert.Equal(54321, digits.Number()); // value = 54321.
         }
 
+        [Fact]
+        public void T9()
+        {
+            Assert.True(16.IsEven()); // returns true
+            Assert.False(16.IsOdd()); // returns false
+            Assert.False(17.IsEven()); // returns false
+            Assert.True((-17).IsOdd()); // return true
+
+        }
+
     }
 
 }
