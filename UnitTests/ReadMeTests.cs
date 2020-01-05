@@ -66,22 +66,14 @@ namespace NumberUtil
         [Fact]
         public void T7()
         {
-            var dig1 = 12345.Digits(); // Gets array with digits 1, 2, 3, 4 and 5 (dig1[0] = 1 and dig1[4] = 5)
-            var dig2 = (-12345).Digits(); // Gets array with digits -1, -2, -3, -4 and -5 (dig2[0] = -1 and dig2[4] = -5)
+            var dig = 12345.Digits(); // Gets array with digits 1, 2, 3, 4 and 5 (dig[0] = 1 and dig[4] = 5)
 
-            Assert.Equal(5, dig1.Length);
-            Assert.Equal(1, dig1[0]);
-            Assert.Equal(2, dig1[1]);
-            Assert.Equal(3, dig1[2]);
-            Assert.Equal(4, dig1[3]);
-            Assert.Equal(5, dig1[4]);
-
-            Assert.Equal(5, dig2.Length);
-            Assert.Equal(-1, dig2[0]);
-            Assert.Equal(-2, dig2[1]);
-            Assert.Equal(-3, dig2[2]);
-            Assert.Equal(-4, dig2[3]);
-            Assert.Equal(-5, dig2[4]);
+            Assert.Equal(5, dig.Length);
+            Assert.Equal(1, dig[0]);
+            Assert.Equal(2, dig[1]);
+            Assert.Equal(3, dig[2]);
+            Assert.Equal(4, dig[3]);
+            Assert.Equal(5, dig[4]);
         }
 
     }

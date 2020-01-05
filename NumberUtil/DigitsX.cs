@@ -113,6 +113,11 @@ namespace NumberUtil
         /// <returns>Digits</returns>
         public static int[] Digits(this BigInteger n)
         {
+            if (n < 0)
+            {
+                throw new ArgumentException(nameof(n) + " < 0 : " + n + " < 0");
+            }
+
             var count = n.NumberOfDigits();
             var retVal = new int[count];
             for (var i = count - 1; i >= 0; i--)
@@ -131,6 +136,11 @@ namespace NumberUtil
         /// <returns>Digits</returns>
         public static int[] Digits(this int n)
         {
+            if (n < 0)
+            {
+                throw new ArgumentException(nameof(n) + " < 0 : " + n + " < 0");
+            }
+
             var count = n.NumberOfDigits();
             var retVal = new int[count];
             for (var i = count - 1; i >= 0; i--)
@@ -149,6 +159,11 @@ namespace NumberUtil
         /// <returns>Digits</returns>
         public static int[] Digits(this long n)
         {
+            if (n < 0)
+            {
+                throw new ArgumentException(nameof(n) + " < 0 : " + n + " < 0");
+            }
+
             var count = n.NumberOfDigits();
             var retVal = new int[count];
             for (var i = count - 1; i >= 0; i--)

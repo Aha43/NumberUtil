@@ -29,16 +29,6 @@ namespace NumberUtil
         }
 
         [Fact]
-        public void DigitsOf_1Minus()
-        {
-            int[] digits = (-1).Digits();
-
-            Assert.Single(digits);
-
-            Assert.Equal(-1, digits[0]);
-        }
-
-        [Fact]
         public void DigitsOf_12()
         {
             int[] digits = 12.Digits();
@@ -70,29 +60,6 @@ namespace NumberUtil
             Assert.Equal(6, digits[7]);
             Assert.Equal(4, digits[8]);
             Assert.Equal(7, digits[9]);
-        }
-
-        [Fact]
-        public void DigitsOf_2147483648Minus()
-        {
-            int n = int.MinValue;
-            
-            Assert.Equal(-2147483648, n);
-
-            var digits = n.Digits();
-
-            Assert.Equal(10, digits.Length);
-
-            Assert.Equal(-2, digits[0]);
-            Assert.Equal(-1, digits[1]);
-            Assert.Equal(-4, digits[2]);
-            Assert.Equal(-7, digits[3]);
-            Assert.Equal(-4, digits[4]);
-            Assert.Equal(-8, digits[5]);
-            Assert.Equal(-3, digits[6]);
-            Assert.Equal(-6, digits[7]);
-            Assert.Equal(-4, digits[8]);
-            Assert.Equal(-8, digits[9]);
         }
 
         [Fact]
@@ -133,6 +100,15 @@ namespace NumberUtil
             {
                 Assert.Equal(expected[i], digits[i]);
             }
+        }
+
+        [Theory]
+        [InlineData(0, new int[] { 0 })]
+        [InlineData(1, new int[] { 1 })]
+
+        public void ToInt(int expected, int[] digits)
+        {
+            Assert.Equal(expected, digits.ToInt());
         }
 
     }
