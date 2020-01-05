@@ -106,6 +106,11 @@ namespace NumberUtil
             return (int)Math.Floor(BigInteger.Log10(BigInteger.Abs(n)) + 1);
         }
 
+        /// <summary>
+        /// Gets digits of a number.
+        /// </summary>
+        /// <param name="n">Number</param>
+        /// <returns>Digits</returns>
         public static int[] Digits(this BigInteger n)
         {
             var count = n.NumberOfDigits();
@@ -119,6 +124,11 @@ namespace NumberUtil
             return retVal;
         }
 
+        /// <summary>
+        /// Gets digits of a number.
+        /// </summary>
+        /// <param name="n">Number</param>
+        /// <returns>Digits</returns>
         public static int[] Digits(this int n)
         {
             var count = n.NumberOfDigits();
@@ -132,6 +142,11 @@ namespace NumberUtil
             return retVal;
         }
 
+        /// <summary>
+        /// Gets digits of a number.
+        /// </summary>
+        /// <param name="n">Number</param>
+        /// <returns>Digits</returns>
         public static int[] Digits(this long n)
         {
             var count = n.NumberOfDigits();
