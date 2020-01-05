@@ -1,4 +1,4 @@
-Work in progress
+README is work in progress
 # NumberUtil
 ### Utilities of use when coding with numbers in a readable way using C#
 #### Background ####
