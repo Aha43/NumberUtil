@@ -4,6 +4,9 @@ README is work in progress
 #### Background ####
 Coding challenges (for example the [Euler project](https://projecteuler.net/)'s problems) in C# I started to re-use code over problems and decided to put that stuff in this library. Guidelines for the design of the library: https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules
 
+#### License 
+[MIT](https://github.com/Aha43/NumberUtil/blob/master/LICENSE)
+
 #### Coding with numbers
 ##### Number even or odd?
 <!-- T9 -->
