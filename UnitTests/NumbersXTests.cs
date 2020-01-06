@@ -2,7 +2,7 @@
 
 namespace NumberUtil
 {
-    public class NumbersX
+    public class NumbersXTests
     {
         // even
 

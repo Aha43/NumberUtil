@@ -93,6 +93,7 @@ namespace NumberUtil
         }
 
         [Fact]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0042:Deconstruct variable declaration")]
         public void T10()
         {
             var fact1 = 5.Factorial(); // All componenets of tuple factorial (AsInt, AsLong and Value) assigned 5!
