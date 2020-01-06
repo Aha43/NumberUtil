@@ -85,5 +85,5 @@ var largest = primeNumbers.Last(); // using LINQ to get the largest prime less o
 #### Factorials
 ```c#
 var fact1 = 5.Factorial(); // All componenets of tuple factorial (AsInt, AsLong and Value) assigned 5!
-var fact2 = 13.Factorial(); // AsInt not assigned (will be 0) 13! since result do not fit an int, AsLong and Value is assigned.
+var fact2 = 13.Factorial(); // AsInt will be since 13!  result do not fit an int, AsLong and Value is assigned.
 ```
