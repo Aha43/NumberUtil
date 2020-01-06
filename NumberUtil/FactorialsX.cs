@@ -45,12 +45,8 @@ namespace NumberUtil
                 return (0, f, new BigInteger(f));
             }
 
-            BigInteger retVal = new BigInteger(n--);
-            while (n > 1)
-            {
-                retVal = BigInteger.Multiply(retVal, new BigInteger(n));
-                n--;
-            }
+            var retVal = new BigInteger(n--);
+            while (n > 1) retVal = BigInteger.Multiply(retVal, new BigInteger(n--));
 
             return (0, 0, retVal);
         }
