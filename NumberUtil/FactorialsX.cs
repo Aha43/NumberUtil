@@ -11,8 +11,8 @@ namespace NumberUtil
         private static readonly int[]  _intFactorials  = new int[]  { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600 };
         private static readonly long[] _longFactorials = new long[] { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000 };
 
-        public static (int AsInt, long AsLong, BigInteger Value) Factorial(this int n) => Factorial((ulong)n);
-        public static (int AsInt, long AsLong, BigInteger Value) Factorial(this ulong n)
+        public static (int AsInt, long AsLong, BigInteger Value) Factorial(this int n) => Factorial((long)n);
+        public static (int AsInt, long AsLong, BigInteger Value) Factorial(this long n)
         {
             if (n < 0)
             {
