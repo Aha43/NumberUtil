@@ -82,7 +82,7 @@ primeNumbers.IsPrime(211); // true
 var largest = primeNumbers.Last(); // using LINQ to get the largest prime less or equal to N.
 ```
 
-#### Factorials (int, long)
+#### Factorials (int and long)
 ```c#
 var fact1 = 5.Factorial(); // All componenets of tuple factorial (AsInt, AsLong and Value) assigned 5!
 var fact2 = 13.Factorial(); // AsInt is 0 since 13! result do not fit an int, AsLong and Value is assigned 13!.
