@@ -7,7 +7,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 [Guidelines for the design of the library](https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules)
 
 #### Coding with numbers
-##### Number even or odd?
+##### Number even or odd? (int, long)
 <!-- T9 -->
 ```c#
 16.IsEven(); // returns true
