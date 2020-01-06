@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Numerics;
-using System.Text;
 using Xunit;
 
 namespace NumberUtil
 {
+    /// <summary>
+    /// Tests for examples in project's README.md file.
+    /// </summary>
     public class ReadMeTests
     {
         [Fact]
@@ -90,7 +90,27 @@ namespace NumberUtil
             Assert.False(16.IsOdd()); // returns false
             Assert.False(17.IsEven()); // returns false
             Assert.True((-17).IsOdd()); // return true
+        }
 
+        [Fact]
+        public void T10()
+        {
+            var fact1 = 5.Factorial(); // All componenets of tuple factorial (AsInt, AsLong and Value) assigned 5!
+            var fact2 = 13.Factorial(); // AsInt is 0 since 13! result do not fit an int, AsLong and Value is assigned 13!.
+            var fact3 = 50.Factorial(); // Only Value (BigInteger) assigned since 50! do not fit long.
+
+            Assert.Equal(120, fact1.AsInt);
+            Assert.Equal(120, fact1.AsLong);
+            Assert.Equal(120, fact1.Value);
+
+            Assert.Equal(0, fact2.AsInt);
+            Assert.Equal(6227020800, fact2.AsLong);
+            Assert.Equal(6227020800, fact2.Value);
+
+            var fact50 = BigInteger.Parse("30414093201713378043612608166064768844377641568960512000000000000");
+            Assert.Equal(0, fact3.AsInt);
+            Assert.Equal(0, fact3.AsLong);
+            Assert.Equal(fact50, fact3.Value);
         }
 
     }
