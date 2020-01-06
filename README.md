@@ -2,7 +2,9 @@ README is work in progress
 # NumberUtil
 ### Utilities of use when coding with numbers in a readable way using C#
 #### Background ####
-Coding challenges (for example the [Euler project](https://projecteuler.net/)'s problems) in C# I started to re-use code over problems and decided to put that stuff in this library. Guidelines for the design of the library: https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules
+Coding challenges (for example the [Euler project](https://projecteuler.net/)'s problems) in C# I started to re-use code over problems and decided to put that stuff in this library. 
+
+[Guidelines for the design of the library](https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules)
 
 #### License 
 [MIT](https://github.com/Aha43/NumberUtil/blob/master/LICENSE)
