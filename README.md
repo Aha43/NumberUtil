@@ -89,3 +89,10 @@ var fact1 = 5.Factorial(); // All componenets of tuple factorial (AsInt, AsLong 
 var fact2 = 13.Factorial(); // AsInt is 0 since 13! result do not fit an int, AsLong and Value is assigned 13!.
 var fact3 = 50.Factorial(); // Only Value (BigInteger) assigned since 50! do not fit long.
 ```
+
+### Polynomial (int[] and long[])
+Given a array with coefficients of a polynomial p p(x) can be evaluated:
+```c#
+var p = new int[] { 3, 2, 5 };
+var y = p.Polynomial(5); 
+```
