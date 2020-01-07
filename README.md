@@ -98,3 +98,9 @@ Given a array with coefficients of a polynomial p p(x) can be evaluated:
 var p = new int[] { 3, -2, 5 };
 var y = p.Polynomial(5); // 3*5^2 - 2*5 + 5 = 20
 ```
+
+### Sequences
+Iterator over Fibonacci numbers
+```c#
+var fibSum = Sequences.Fibonacci.Take(6).Sum(); // Sum 1, 1, 2, 3, 5 : fibSum = 12
+```
