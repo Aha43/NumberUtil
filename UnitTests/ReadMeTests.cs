@@ -114,6 +114,18 @@ namespace NumberUtil
             Assert.Equal(fact50, fact3.Value);
         }
 
+        public void T11()
+        {
+
+        }
+
+        [Fact]
+        public void T12()
+        {
+            var fibSum = Sequences.Fibonacci.Take(6).Sum(); // Sums 0, 1, 1, 2, 3 and 5 : fibSum = 12
+            Assert.Equal(12, fibSum);
+        }
+
     }
 
 }
