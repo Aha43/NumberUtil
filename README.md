@@ -93,6 +93,6 @@ var fact3 = 50.Factorial(); // Only Value (BigInteger) assigned since 50! do not
 ### Polynomial (int[] and long[])
 Given a array with coefficients of a polynomial p p(x) can be evaluated:
 ```c#
-var p = new int[] { 3, 2, 5 };
-var y = p.Polynomial(5); 
+var p = new int[] { 3, -2, 5 };
+var y = p.Polynomial(5); // 3*5^2 - 2*5 + 5 = 20
 ```
