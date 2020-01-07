@@ -3,10 +3,10 @@ using Xunit;
 
 namespace NumberUtil
 {
-    public class FibonacciTests
+    public class SequencesTests
     {
         [Fact]
-        public void Test10First()
+        public void Test10FirstFibonacci()
         {
             var sequence = Sequences.Fibonacci.Take(10).ToArray();
             Assert.Equal(0,  sequence[0]);
