@@ -114,9 +114,12 @@ namespace NumberUtil
             Assert.Equal(fact50, fact3.Value);
         }
 
+        [Fact]
         public void T11()
         {
-
+            var p = new int[] { 3, -2, 5 };
+            var y = p.Polynomial(5); // 3*5^2 - 2*5 + 5 = 70
+            Assert.Equal(70, y);
         }
 
         [Fact]
