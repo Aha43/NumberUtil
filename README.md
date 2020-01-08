@@ -97,7 +97,7 @@ Given a array with coefficients of a polynomial p p(x) can be evaluated:
 <!-- T11 -->
 ```c#
 var p = new int[] { 3, -2, 5 };
-var y = p.Polynomial(5); // 3*5^2 - 2*5 + 5 = 20
+var y = p.Polynomial(5); // 3*5^2 - 2*5 + 5 = 70
 ```
 
 ### Sequences
