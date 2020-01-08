@@ -1,6 +1,6 @@
 README is work in progress
 # NumberUtil
-### Utilities of use when coding with numbers in a readable way using C#
+### Utilities of use when coding with numbers (mostly integers) in a readable way using C#
 #### Background ####
 Coding challenges (for example the [Euler project](https://projecteuler.net/)'s problems) in C# I started to re-use code over problems and decided to put that stuff in this library. 
 
