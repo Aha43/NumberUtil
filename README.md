@@ -101,8 +101,10 @@ var y = p.Polynomial(5); // 3*5^2 - 2*5 + 5 = 70
 ```
 
 ### Sequences
+#### Iterators
 <!-- T12 -->
 Iterator over Fibonacci numbers
 ```c#
 var fibSum = Sequences.Fibonacci.Take(6).Sum(); // Sums 0, 1, 1, 2, 3 and 5 : fibSum = 12
 ```
+#### Closed forms
