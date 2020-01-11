@@ -107,4 +107,5 @@ Iterator over Fibonacci numbers
 ```c#
 var fibSum = Sequences.Fibonacci.Take(6).Sum(); // Sums 0, 1, 1, 2, 3 and 5 : fibSum = 12
 ```
+See the class [https://github.com/Aha43/NumberUtil/blob/master/NumberUtil/Sequences.cs](Sequences) for sequences implemented.
 #### Closed forms
