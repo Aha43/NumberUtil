@@ -8,6 +8,30 @@ namespace NumberUtil
     public static class Sequences
     {
         /// <summary>
+        /// Natural numbers, starts with 0.
+        /// </summary>
+        public static IEnumerable<long> Natural
+        {
+            get
+            {
+                int n = 0;
+                while (true) yield return n++;
+            }
+        }
+
+        /// <summary>
+        /// Squares, starts with 0, 1 and 4.
+        /// </summary>
+        public static IEnumerable<long> Squares
+        {
+            get
+            {
+                int n = 0;
+                while (true) yield return n * n++;
+            }
+        }
+
+        /// <summary>
         /// Fibonacci numbers.
         /// </summary>
         public static IEnumerable<long> Fibonacci

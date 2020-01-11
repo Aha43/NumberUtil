@@ -6,6 +6,30 @@ namespace NumberUtil
     public class SequencesTests
     {
         [Fact]
+        public void Test10FirstNatural()
+        {
+            int expected = 0;
+            foreach (var e in Sequences.Natural)
+            {
+                Assert.Equal(expected++, e);
+                if (expected > 9) return;
+            }
+        }
+
+        [Fact]
+        public void Test10FirstSquare()
+        {
+            int n = 0;
+            foreach (var e in Sequences.Squares)
+            {
+                var expected = n * n;
+                n++;
+                Assert.Equal(expected++, e);
+                if (n > 9) return;
+            }
+        }
+
+        [Fact]
         public void Test10FirstFibonacci()
         {
             var sequence = Sequences.Fibonacci.Take(10).ToArray();
