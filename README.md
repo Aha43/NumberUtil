@@ -108,4 +108,12 @@ Example of iterating over a number sequence, iterating over Fibonacci numbers
 var fibSum = Sequences.Fibonacci.Take(6).Sum(); // Sums 0, 1, 1, 2, 3 and 5 : fibSum = 12
 ```
 See the class [Sequences](https://github.com/Aha43/NumberUtil/blob/master/NumberUtil/Sequences.cs) for sequences implemented.
-#### Closed forms
+#### Closed forms (int and long)
+Finding sum of the ten first perfect square numbers
+```c#
+var sqSum = ClosedForms.SumOfSquares(10);
+```
+Finding the 100th Fibonacci number
+```c#
+var fib = ClosedForms.NthFibonacci(100);
+```
