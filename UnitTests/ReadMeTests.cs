@@ -129,6 +129,21 @@ namespace NumberUtil
             Assert.Equal(12, fibSum);
         }
 
+        [Fact]
+        public void T13()
+        {
+            var sqSum = ClosedForms.SumOfSquares(5);
+            var expected = 1 + 4 + 9 + 16 + 25;
+            Assert.Equal(expected, sqSum);
+        }
+
+        [Fact]
+        public void T14()
+        {
+            var fib = ClosedForms.NthFibonacci(5);
+            Assert.Equal(5, fib);
+        }
+
     }
 
 }
