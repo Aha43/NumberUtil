@@ -1,4 +1,3 @@
-README is work in progress
 # NumberUtil
 ### Utilities of use when coding with numbers (mostly integers) in a readable way using C#
 #### Background ####
