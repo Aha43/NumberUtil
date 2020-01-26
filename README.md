@@ -109,12 +109,14 @@ var fibSum = Sequences.Fibonacci.Take(6).Sum(); // Sums 0, 1, 1, 2, 3 and 5 : fi
 ```
 See the class [Sequences](https://github.com/Aha43/NumberUtil/blob/master/NumberUtil/Sequences.cs) for sequences implemented.
 #### Closed forms (int and long)
-Finding sum of the ten first perfect square numbers
+Finding sum of the five first perfect square numbers
+<!-- T13 -->
 ```c#
-var sqSum = ClosedForms.SumOfSquares(10);
+var sqSum = ClosedForms.SumOfSquares(5); // sqSum = 55 = 1 + 4 + 9 + 16 + 25
 ```
-Finding the 100th Fibonacci number
+Finding the 5th Fibonacci number
+<!-- T14 -->
 ```c#
-var fib = ClosedForms.NthFibonacci(100);
+var fib = ClosedForms.NthFibonacci(5);
 ```
 See the class [ClosedForms](https://github.com/Aha43/NumberUtil/blob/master/NumberUtil/ClosedForms.cs) for closed forms implemented.
