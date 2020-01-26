@@ -117,3 +117,4 @@ Finding the 100th Fibonacci number
 ```c#
 var fib = ClosedForms.NthFibonacci(100);
 ```
+See the class [ClosedForms](https://github.com/Aha43/NumberUtil/blob/master/NumberUtil/ClosedForms.cs) for closed forms implemented.
