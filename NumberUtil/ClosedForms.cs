@@ -9,6 +9,7 @@ namespace NumberUtil
     /// </summary>
     public static class ClosedForms
     {
+        #region sums
         /// <summary>
         /// Sum of sequence of natural numbers: Sum(0, 1, 2, 3, 4... n).
         /// </summary>
@@ -36,13 +37,16 @@ namespace NumberUtil
         /// <param name="n">Number of terms</param>
         /// <returns>Sum</returns>
         public static long SumOfSquares(long n) => n * (n + 1) * (2 * n + 1) / 6;
+        #endregion
 
+        #region nth
         /// <summary>
         /// Sum of the Fibonacci sequence.
         /// </summary>
         /// <param name="n">Number of terms</param>
         /// <returns>Sum</returns>
-        public static long SumOfFibonaccis(long n) => (long)Math.Floor((Math.Pow(GoldenRatio, n) / SquareRootOf5) + 0.5);
+        public static long NthFibonacci(long n) => (long)Math.Floor((Math.Pow(GoldenRatio, n) / SquareRootOf5) + 0.5);
+        #endregion
 
     }
 
