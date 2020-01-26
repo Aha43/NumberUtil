@@ -117,6 +117,6 @@ var sqSum = ClosedForms.SumOfSquares(5); // sqSum = 55 = 1 + 4 + 9 + 16 + 25
 Finding the 5th Fibonacci number
 <!-- T14 -->
 ```c#
-var fib = ClosedForms.NthFibonacci(5);
+var fib = ClosedForms.NthFibonacci(5); // fib = 5
 ```
 See the class [ClosedForms](https://github.com/Aha43/NumberUtil/blob/master/NumberUtil/ClosedForms.cs) for closed forms implemented.
