@@ -7,7 +7,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 
 [Guidelines for the design of the library](https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules)
 
-#### Coding with IEnumerable of numbers ####
+#### Coding with IEnumerable of numbers (int, long) ####
 Using Linq we can do 
 <!-- T15 -->
 ```c#
