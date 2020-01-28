@@ -5,7 +5,7 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 
 [Guidelines for the design of the library](https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules)
 
-[Development tasks](https://github.com/Aha43/NumberUtil/projects/1)
+[ToDo](https://github.com/Aha43/NumberUtil/projects/1)
 
 #### Coding with numbers
 ##### Number even or odd? (int, long)
