@@ -9,12 +9,13 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 
 #### Coding with IEnumerable of numbers ####
 Using Linq we can do 
+<!-- T15 -->
 ```c#
-var isTrue = [5, 20].Sum() == 25;
+var isTrue = new int[] { 5, 20 }.Sum() == 25;
 ```
 and with NumberUtil we can also do 
 ```c#
-var alsoTrue = [5, 5].Product() == 25;`
+var alsoTrue = new int[] { 5, 5 }.Product() == 25;
 ```
 
 #### Coding with numbers
