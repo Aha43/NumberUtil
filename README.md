@@ -8,7 +8,14 @@ Coding challenges (for example the [Euler project](https://projecteuler.net/)'s 
 [Guidelines for the design of the library](https://github.com/Aha43/NumberUtil/wiki/NumberUtil-Library-Design-Rules)
 
 #### Coding with IEnumerable of numbers ####
-Using Linq we can do `var isTrue = [5, 20].Sum() == 25;` and with NumberUtil we can also do `var alsoTrue = [5, 5].Product() == 25;`
+Using Linq we can do 
+```c#
+var isTrue = [5, 20].Sum() == 25;
+```
+and with NumberUtil we can also do 
+```c#
+var alsoTrue = [5, 5].Product() == 25;`
+```
 
 #### Coding with numbers
 ##### Number even or odd? (int, long)
