@@ -144,6 +144,16 @@ namespace NumberUtil
             Assert.Equal(5, fib);
         }
 
+        [Fact]
+        public void T15()
+        {
+            var isTrue = new int[] { 5, 20 }.Sum() == 25;
+            var alsoTrue = new int[] { 5, 5 }.Product() == 25;
+
+            Assert.True(isTrue);
+            Assert.True(alsoTrue);
+        }
+
     }
 
 }
