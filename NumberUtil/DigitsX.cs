@@ -193,30 +193,34 @@ namespace NumberUtil
                 {
                     throw new ArgumentException(nameof(digits) + "[" + i + "] < 0 : " + d + " < 0");
                 }
-
-                switch (p)
+                if (d > 9)
                 {
-                    case  0: retVal += d * 1; break;
-                    case  1: retVal += d * 10; break;
-                    case  2: retVal += d * 100; break;
-                    case  3: retVal += d * 1000; break;
-                    case  4: retVal += d * 10000; break;
-                    case  5: retVal += d * 100000; break;
-                    case  6: retVal += d * 1000000; break;
-                    case  7: retVal += d * 10000000; break;
-                    case  8: retVal += d * 100000000; break;
-                    case  9: retVal += d * 1000000000; break;
-                    case 10: retVal += d * 10000000000; break;
-                    case 11: retVal += d * 100000000000; break;
-                    case 12: retVal += d * 1000000000000; break;
-                    case 13: retVal += d * 10000000000000; break;
-                    case 14: retVal += d * 100000000000000; break;
-                    case 15: retVal += d * 1000000000000000; break;
-                    case 16: retVal += d * 10000000000000000; break;
-                    case 17: retVal += d * 100000000000000000; break;
-                    case 18: retVal += d * 1000000000000000000; break;
-                    default: throw new OverflowException();
+                    throw new ArgumentException(nameof(digits) + "[" + i + "] > 9 : " + d + " > 9");
                 }
+
+                retVal += p switch
+                {
+                    0 => d * 1,
+                    1 => d * 10,
+                    2 => d * 100,
+                    3 => d * 1000,
+                    4 => d * 10000,
+                    5 => d * 100000,
+                    6 => d * 1000000,
+                    7 => d * 10000000,
+                    8 => d * 100000000,
+                    9 => d * 1000000000,
+                    10 => d * 10000000000,
+                    11 => d * 100000000000,
+                    12 => d * 1000000000000,
+                    13 => d * 10000000000000,
+                    14 => d * 100000000000000,
+                    15 => d * 1000000000000000,
+                    16 => d * 10000000000000000,
+                    17 => d * 100000000000000000,
+                    18 => d * 1000000000000000000,
+                    _ => throw new OverflowException()
+                };
             }
 
             return retVal;
@@ -240,26 +244,73 @@ namespace NumberUtil
                 {
                     throw new ArgumentException(nameof(digits) + "[" + i + "] < 0 : " + d + " < 0");
                 }
-
-                switch (p)
+                if (d > 9)
                 {
-                    case 0: retVal += d * 1; break;
-                    case 1: retVal += d * 10; break;
-                    case 2: retVal += d * 100; break;
-                    case 3: retVal += d * 1000; break;
-                    case 4: retVal += d * 10000; break;
-                    case 5: retVal += d * 100000; break;
-                    case 6: retVal += d * 1000000; break;
-                    case 7: retVal += d * 10000000; break;
-                    case 8: retVal += d * 100000000; break;
-                    case 9: retVal += d * 1000000000; break;
-                    default: throw new OverflowException();
+                    throw new ArgumentException(nameof(digits) + "[" + i + "] > 9 : " + d + " > 9");
                 }
+
+                retVal += p switch
+                {
+                    0 => d * 1,
+                    1 => d * 10,
+                    2 => d * 100,
+                    3 => d * 1000,
+                    4 => d * 10000,
+                    5 => d * 100000,
+                    6 => d * 1000000,
+                    7 => d * 10000000,
+                    8 => d * 100000000,
+                    9 => d * 1000000000,
+                    _ => throw new OverflowException()
+                };
             }
 
             return retVal;
         }
 
+        /// <summary>
+        /// Check if reverse the digits given gives same sequence / number.
+        /// </summary>
+        /// <param name="digits">Array of digits to test</param> 
+        /// <returns>True if does, false if does not</returns>
+        public static bool IsPalindrome(this int[] digits)
+        {
+            digits.CheckAllDigits();
+
+            var n = digits.Length;
+            for (int i = 0, j = n - 1; i < n; i++, j--)
+            {
+                if (digits[i] != digits[j])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Throws exception if element of digits less than 0 or greater than 9.
+        /// </summary>
+        /// <param name="digits"></param> Array to test.
+        public static void CheckAllDigits(this int[] digits)
+        {
+            for (var i = 0; i < digits.Length; i++)
+            {
+                var d = digits[i];
+                if (d < 0)
+                {
+                    throw new ArgumentException(nameof(digits) + "[" + i + "] < 0 : " + d + " < 0");
+                }
+                if (d > 9)
+                {
+                    throw new ArgumentException(nameof(digits) + "[" + i + "] > 9 : " + d + " > 9");
+                }
+            }
+        }
+
     }
+
+    
 
 }

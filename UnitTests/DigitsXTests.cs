@@ -149,6 +149,20 @@ namespace NumberUtil
             Assert.Equal(number, digits.Number());
         }
 
+        [Theory]
+        [InlineData(true, new int[] { })]
+        [InlineData(true, new int[] { 0 })]
+        [InlineData(true, new int[] { 5 })]
+        [InlineData(false, new int[] { 1, 2 })]
+        [InlineData(false, new int[] { 2, 1 })]
+        [InlineData(true, new int[] { 1, 1 })]
+        [InlineData(false, new int[] { 8, 1, 1, 9 })]
+        [InlineData(true, new int[] { 8, 1, 1, 8 })]
+        public void Palindrom(bool expected, int[] digits)
+        {
+            Assert.Equal(expected, digits.IsPalindrome());
+        }
+
     }
 
 }
