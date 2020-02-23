@@ -101,6 +101,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="n">Value</param>
         /// <returns>Number of digits</returns>
+        /// <exception cref="ArgumentException">If n less than 0.</exception>
         public static int NumberOfDigits(this BigInteger n)
         {
             return (int)Math.Floor(BigInteger.Log10(BigInteger.Abs(n)) + 1);
@@ -111,6 +112,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="n">Number</param>
         /// <returns>Digits</returns>
+        /// <exception cref="ArgumentException">If n less than 0.</exception>
         public static int[] Digits(this BigInteger n)
         {
             if (n < 0)
@@ -134,6 +136,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="n">Number</param>
         /// <returns>Digits</returns>
+        /// <exception cref="ArgumentException">If n less than 0.</exception>
         public static int[] Digits(this int n)
         {
             if (n < 0)
@@ -157,6 +160,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="n">Number</param>
         /// <returns>Digits</returns>
+        /// <exception cref="ArgumentException">If n less than 0.</exception>
         public static long[] Digits(this long n)
         {
             if (n < 0)
@@ -180,6 +184,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="digits">Digits</param>
         /// <returns>Base 10 representation</returns>
+        /// <exception cref="ArgumentException">If an element in digits is less than 0 or larger than 9.</exception>
         public static long Number(this long[] digits)
         {
             var retVal = 0L;
@@ -231,6 +236,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="digits">Digits</param>
         /// <returns>Base 10 representation</returns>
+        /// <exception cref="ArgumentException">If an element in digits is less than 0 or larger than 9.</exception>
         public static int Number(this int[] digits)
         {
             var retVal = 0;
@@ -273,6 +279,7 @@ namespace NumberUtil
         /// </summary>
         /// <param name="digits">Array of digits to test</param> 
         /// <returns>True if does, false if does not</returns>
+        /// <exception cref="ArgumentException">If an element in digits is less than 0 or larger than 9.</exception>
         public static bool IsPalindrome(this int[] digits)
         {
             digits.CheckAllDigits();
@@ -293,6 +300,7 @@ namespace NumberUtil
         /// Throws exception if element of digits less than 0 or greater than 9.
         /// </summary>
         /// <param name="digits"></param> Array to test.
+        /// <exception cref="ArgumentException">If an element in digits is less than 0 or larger than 9.</exception>
         public static void CheckAllDigits(this int[] digits)
         {
             for (var i = 0; i < digits.Length; i++)
